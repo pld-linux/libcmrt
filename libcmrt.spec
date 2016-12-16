@@ -6,7 +6,7 @@ Summary:	C for Media Runtime - media GPU kernel manager for Intel GPUs
 Summary(pl.UTF-8):	C for Media Runtime - zarządca jąder GPU dla układów Intela
 Name:		libcmrt
 Version:	1.0.5
-Release:	1
+Release:	2
 License:	MIT
 Group:		Libraries
 Source0:	https://github.com/01org/cmrt/archive/%{version}.tar.gz
