@@ -1,0 +1,15 @@
+--- cmrt-1.0.5/src/cm_mem.h.orig	2015-09-10 01:13:13.000000000 +0200
++++ cmrt-1.0.5/src/cm_mem.h	2016-12-16 20:57:05.769476573 +0100
+@@ -182,8 +182,11 @@
+ #ifndef NO_EXCEPTION_HANDLING
+ 	__try {
+ #endif
+-
++#ifdef __ILP32__
++		if (0) {
++#else
+ 		if (sizeof(void *) == 4) {
++#endif
+ 			unsigned int local_eax, local_ebx, local_ecx, local_edx;
+ 			__asm__ __volatile__("pushl %%ebx      \n\t" "cpuid  \n\t" "movl %%ebx, %1   \n\t" "popl %%ebx \n\t"	/* restore the old %ebx */
+ 					     :"=a"(local_eax), "=r"(local_ebx),
