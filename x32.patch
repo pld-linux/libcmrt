@@ -5,7 +5,7 @@
  	__try {
  #endif
 -
-+#ifdef __ILP32__
++#if defined(__x86_64__) && defined( __ILP32__)
 +		if (0) {
 +#else
  		if (sizeof(void *) == 4) {
